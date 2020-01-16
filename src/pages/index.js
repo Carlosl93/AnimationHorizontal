@@ -1,21 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import land from '../images/land.jpg';
+import land1 from '../images/land1.jpeg';
+import land2 from '../images/land2.jpeg';
+
+const AppContainer = styled.div`
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  width: 100vw;
+`
+
+const ImgContainer = styled.div`
+  background: url(${land});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 240px;
+`
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <AppContainer>
+    <ImgContainer />
+  </AppContainer>
 )
 
 export default IndexPage
